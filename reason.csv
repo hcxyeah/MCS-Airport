@@ -1,0 +1,9 @@
+reason,percentage
+Air system delay,0.054421676
+Security delay,0.000335042
+Airline delay,0.055585052
+Late aircraft delay,0.066215757
+Weather delay,0.00619287
+Diverted,0.002609863
+Cancelled,0.015446431
+On Time,0.799193309
