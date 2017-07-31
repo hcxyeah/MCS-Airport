@@ -1,0 +1,166 @@
+# MCS-Airport<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset="utf-8">
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/1.12.1/d3-annotation.min.js"></script>
+
+	<script src="myScript.js"></script>
+
+</head>
+<body>
+
+<div class="tab">
+	<button class="tablinks active" onclick="openSection(event, 'Reason')">1.Overview</button>
+	<button class="tablinks" onclick="openSection(event, 'Time')">2.Month</button>
+	<button class="tablinks" onclick="openSection(event, 'Day')">3.Day of Week</button>
+	<button class="tablinks" onclick="openSection(event, 'Airlines')">4.Airlines</button>
+	<button class="tablinks" onclick="openSection(event, 'Map')">5.Airports</button>
+</div>
+
+<div id='Reason' class="tabcontent">
+	<button id="myBtn">About the Visualization</button>
+	<h3>US Domestic Flight Delay Reason in 2008</h3>
+	<div class="annotation">
+		In 2008, almost 80% of the US domestic flights were on time. 1.54% of the flights got cancelled and 0.26% got converted.
+	About 18% of the flights were delayed. Among the five delayed reasons, the major reasons are late aircraft delay,
+		airline delay, air system delay, all of which account for about 5%-6% of the total flights.
+	</div>
+</div>
+
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<div class="modal-header">
+			<span class="close">&times;</span>
+			<h2>About the visualization</h2>
+		</div>
+		<div class="modal-body">
+			<h3>
+				Structure
+			</h3>
+			<p>This visualization use an interactive slideshow structure.</p>
+			<h3>Model</h3>
+			<p>
+				This narrative visualization includes scenes, annotations, parameters and triggers.<br><br>
+				<b>Scenes</b>: There are five scenes in total. Each scene contains a graph. These scenes all follow a
+				a consistent visual structure so it will keep viewer oriented.<br>
+				<b>Annotations</b>: Annotations are added in each scene. The annotations
+				follow a consistent templates. Annotations get cleared when move to next scene.<br>
+				<b>Parameters</b>: the parameter in my visualization is the slide number on top of
+				the screen.It controls which scene to show up.<br>
+				<b>Triggers</b><br>1. Button of scene number: When the button got clicked,
+				all the content in current scene got cleared and content of the scene clicked will show.<br>
+				2. Tooltip: When mouse move to the element in the graph, a tooltip of the data details will show up.<br>
+
+			</p>
+			<h3>User interface events</h3>
+			<p>
+				1. When the mouse hover over the elements(bars, pie, circle) in the chart, a tooltip of the data will show up.<br>
+				2. When user click on the bottom on top of the page, next scene will show up.
+			</p>
+
+			<h3>Content</h3>
+			<p><b>1. Overview</b><br>
+			This scene uses a pie chart to visualize the percentages of flights that are on time, delay and canceled.<br>
+			<b>2.Month</b><br>
+			This scene uses a bar chart to visualize the total number of flights and average arrival delay group by month.<br>
+			<b>3.Day of week</b><br>
+			This scene uses a bar chart to visualize the total number of flights and average arrival delay group by day of week.<br>
+			<b>4.Airlines</b><br>
+			This scene uses a bar chart to visualize the average arrival delay group by Airlines.<br>
+			<b>5.Airports</b><br>
+			This scene uses a map to visualize the total number of flights and average arrival delay group by airports.</p>
+		</div>
+		<div class="modal-footer">
+			<h3></h3>
+		</div>
+	</div>
+</div>
+
+<div id='Time' class="tabcontent">
+	<h3>US Domestic Flight Arrival delay by Month</h3>
+	<div class="legendtitle">
+		<p>Number of flights</p>
+	</div>
+	<div id="month1" class="annotation" style="left:500px;top:250px;width:200px;">
+		<p>
+			June has the highest average arrival delay 9.6 minutes.
+			September and October have the lowest average arrival delay.
+		</p>
+	</div>
+	<!--<div id="month2" class="annotation" style="left:700px;top:650px">-->
+		<!--<p>September and October have the best performance.</p>-->
+	<!--</div>-->
+</div>
+
+<div id='Day' class="tabcontent">
+	<h3>US Domestic Flight Arrival delay by Day of Week</h3>
+	<div class="legendtitle">
+		<p>Number of flights</p>
+	</div>
+	<div id="dayofweek" class="annotation">
+		<p>Monday, Thursday, Friday and Sunday have the highest average arrival delay.
+			Saturday has the best performance.
+		</p>
+	</div>
+</div>
+
+<div id='Airlines' class="tabcontent">
+	<h3>US Domestic Flight Arrival delay by Airlines</h3>
+	<div class="annotation">
+		<p>Spirit Airlines has the highest average arrival delay: 15 minutes. Following is
+			Frontier Airlines: 12.5 minutes. Alaska Airlines, Delta Airlines and Hawaiian Airlines
+			have the best performance. The average arrival delay is about 6 minutes.</p>
+	</div>
+</div>
+
+<div id='Map' class="tabcontent">
+	<h3>US Domestic Flight Arrival delay by Airports</h3>
+	<div class="annotation">
+		<p>Hartsfield-Jackson Atlanta International Airport has the biggest incoming volumn,
+			about 376k. But did very good in average arrival delay, about 2 minutes.
+		Chicago O'Hare International, Dallas International Airport, Los Angeles International
+		Airport, San Francisco International Airport also have very large incoming volumn.
+			These airports have an average arrival delay at 5 minutes - 6 minutes.
+		LaGuardia Airport has the worst performance among the major airports in US, average
+		arrival delay of which is 10 minutes. </p>
+	</div>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+//
+//    // When the user clicks anywhere outside of the modal, close it
+//    window.onclick = function(event) {
+//        if (event.target = modal) {
+//            modal.style.display = "none";
+//        }
+//    }
+</script>
+
+</body>
+</html>
+
