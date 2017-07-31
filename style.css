@@ -1,0 +1,285 @@
+div.tab {
+		overflow: hidden;
+		border: 1px solid #ccc;
+		background-color: #f1f1f1;
+	}
+
+div.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+}
+
+div.tab button:hover {
+	background-color: #ddd;
+}
+
+div.tab button.tablinks.active {
+	background-color: #ccc;
+}
+
+#Reason {
+	display: block;
+}
+
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+#Airlines .bar {
+	fill: #7b6888;
+
+}
+
+.bar:hover {
+	fill: brown;
+}
+
+.axis-x path{
+	display: none;
+}
+
+.tooltip {
+	position: absolute;
+	display: none;
+	width: auto;
+	height: auto;
+	background: none repeat scroll 0 0 white;
+	border: 0 none;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: -3px 3px 15px #888888;
+	color: black;
+	font: 12px sans-serif;
+	padding: 5px;
+	text-align: center;
+}
+
+.pie:hover {
+	opacity: 0.5;
+}
+
+.states {
+	fill: #ccc;
+	stroke: #fff;
+}
+
+.circle {
+	opacity: 0.6;
+}
+
+.circle:hover {
+	fill: brown;
+	opacity: 1;
+}
+
+ .box {
+	fill:none;
+	stroke:#888;
+	font-size:5px;
+}
+
+.legend .circle {
+	fill: #9a9bde;
+	opacity: 0.8;
+}
+
+.annotation {
+	background: none repeat scroll 0 0 white;
+	border: 0 none;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: -3px 3px 15px #888888;
+	color: black;
+	font: 12px sans-serif;
+	padding: 5px;
+	text-align: left;
+	box-sizing: border-box;
+	content: "\25BC";
+	position: absolute;
+}
+
+/*#month1  {*/
+	/*width: 200px;*/
+	/*height: 100px;*/
+	/*left: 700px;*/
+	/*top: 200px;*/
+/*}*/
+
+#month2 .annotation {
+	width: 200px;
+	height: 100px;
+	left: 700px;
+	top: 200px;
+}
+
+#Day .annotation {
+	width: 200px;
+	height: 100px;
+	left: 700px;
+	top: 200px;
+}
+
+#Reason .annotation {
+	width: 200px;
+	height: 150px;
+	left: 400px;
+}
+
+#Airlines .annotation {
+	width: 200px;
+	height: 130px;
+	left: 800px;
+}
+
+#Map .annotation {
+	width: 300px;
+	height: 180px;
+	left: 50px;
+	top: 580px;
+}
+
+.legendtitle {
+	left: 450px;
+	top: 130px;
+	position: absolute;
+	height: 10px;
+}
+
+.line {
+	stroke: black;
+	stroke-width: 1;
+}
+
+
+/*.annotation path {*/
+	/*stroke: var(--annotation-color);*/
+	/*fill: none;*/
+/*}*/
+
+/*.annotation path.connector-arrow,*/
+/*.annotation path.connector-dot,*/
+/*.title text, .annotation text {*/
+	/*fill: var(--annotation-color);*/
+/*}*/
+
+/*.annotation-note-bg {*/
+	/*fill: rgba(0, 0, 0, 0);*/
+/*}*/
+
+/*.annotation-note-title, text.title {*/
+	/*font-weight: bold;*/
+/*}*/
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* The Close Button */
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: #7b6888;
+	color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+	padding: 2px 16px;
+	background-color: #7b6888;
+	color: white;
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+	from {top: -300px; opacity: 0}
+	to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+	from {top: -300px; opacity: 0}
+	to {top: 0; opacity: 1}
+}
+
+
+#myBtn:visited {
+	color: #FFFFFF;
+	background-color: ##8a89a6;
+}
+
+
+#myBtn {
+	border: none;
+	display: inline-block;
+	outline: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	color: #FFFFFF;
+	background-color: #7b6888;
+	font-size: 18px;
+}
+
+#myBtn:hover {
+	color: #fff;
+	background-color: #8a89a6;
+}
+
+
+
+
+
+
