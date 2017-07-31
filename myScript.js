@@ -462,13 +462,7 @@ function byReason(data) {
 				.text(function(d) { return d; });
 
 
-		svg.append("line")
-			.attr("class", "line")
-			.style("stroke", "black")
-            .attr("x1", 300)
-            .attr("y1", 150)
-            .attr("x2", 380)
-            .attr("y2", 100);
+		
 }
 
 function byAirport(geo_data, data) {
