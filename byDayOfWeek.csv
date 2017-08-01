@@ -1,8 +1,99 @@
-DAY_OF_WEEK,ARRIVAL_DELAY,DEPARTURE_DELAY,count
-Monday,6.00206345,10.87177506,865543
-Tuesday,4.246040907,9.164522266,844600
-Wednesday,3.845467849,8.645276691,855897
-Thursday,5.668333555,9.956913497,872521
-Friday,4.764079085,9.429767978,862209
-Saturday,1.852892011,7.827415699,700545
-Sunday,3.958293201,9.402855628,817764
+DAY_OF_WEEK,AIRLINE,ARRIVAL_DELAY,COUNT
+Monday,American Airlines Inc.,5.091884117,106225
+Monday,Alaska Airlines Inc.,-0.251706964,25082
+Monday,JetBlue Airways,8.414430245,38902
+Monday,Delta Air Lines Inc.,1.33741481,131682
+Monday,Atlantic Southeast Airlines,9.002180775,86979
+Monday,Frontier Airlines Inc.,15.32640269,13228
+Monday,Hawaiian Airlines Inc.,1.921715768,10841
+Monday,American Eagle Airlines Inc.,10.17312856,43872
+Monday,Spirit Air Lines,17.70864213,16794
+Monday,Skywest Airlines Inc.,7.864714381,87484
+Monday,United Air Lines Inc.,7.459238917,78549
+Monday,US Airways Inc.,5.082000777,29391
+Monday,Virgin America,6.728908393,9286
+Monday,Southwest Airlines Co.,5.093579295,187228
+Tuesday,American Airlines Inc.,1.231626184,103401
+Tuesday,Alaska Airlines Inc.,-1.799450321,24165
+Tuesday,JetBlue Airways,8.37120096,37753
+Tuesday,Delta Air Lines Inc.,0.691492623,128412
+Tuesday,Atlantic Southeast Airlines,6.947333805,83541
+Tuesday,Frontier Airlines Inc.,12.50108916,12991
+Tuesday,Hawaiian Airlines Inc.,-0.297183771,10516
+Tuesday,American Eagle Airlines Inc.,4.938546534,42970
+Tuesday,Spirit Air Lines,14.17232995,16359
+Tuesday,Skywest Airlines Inc.,5.93030167,84054
+Tuesday,United Air Lines Inc.,6.540362775,74945
+Tuesday,US Airways Inc.,4.442825031,28496
+Tuesday,Virgin America,3.198716505,8990
+Tuesday,Southwest Airlines Co.,4.172779278,188007
+Wednesday,American Airlines Inc.,2.560602025,106503
+Wednesday,Alaska Airlines Inc.,-1.71545653,24395
+Wednesday,JetBlue Airways,4.959453646,37749
+Wednesday,Delta Air Lines Inc.,0.048972348,129943
+Wednesday,Atlantic Southeast Airlines,6.963615746,85001
+Wednesday,Frontier Airlines Inc.,12.50251062,13015
+Wednesday,Hawaiian Airlines Inc.,1.416968683,10796
+Wednesday,American Eagle Airlines Inc.,5.620161735,43450
+Wednesday,Spirit Air Lines,12.45228831,16493
+Wednesday,Skywest Airlines Inc.,5.7830904,86211
+Wednesday,United Air Lines Inc.,5.464741685,76718
+Wednesday,US Airways Inc.,1.557338215,28309
+Wednesday,Virgin America,0.444900677,9071
+Wednesday,Southwest Airlines Co.,3.672957466,188243
+Thursday,American Airlines Inc.,4.865197691,108168
+Thursday,Alaska Airlines Inc.,-0.453687246,25477
+Thursday,JetBlue Airways,9.277834813,39470
+Thursday,Delta Air Lines Inc.,2.333818431,132064
+Thursday,Atlantic Southeast Airlines,7.821235013,87126
+Thursday,Frontier Airlines Inc.,11.7394044,13424
+Thursday,Hawaiian Airlines Inc.,2.886809593,11031
+Thursday,American Eagle Airlines Inc.,6.905218671,44314
+Thursday,Spirit Air Lines,13.83552082,17054
+Thursday,Skywest Airlines Inc.,6.054369989,87902
+Thursday,United Air Lines Inc.,6.756035432,79126
+Thursday,US Airways Inc.,4.526863085,30160
+Thursday,Virgin America,6.841016295,9411
+Thursday,Southwest Airlines Co.,5.781380736,187794
+Friday,American Airlines Inc.,4.833970451,106374
+Friday,Alaska Airlines Inc.,0.416182888,25135
+Friday,JetBlue Airways,5.907163667,38801
+Friday,Delta Air Lines Inc.,0.162803787,130234
+Friday,Atlantic Southeast Airlines,5.702434295,86299
+Friday,Frontier Airlines Inc.,12.11624905,13242
+Friday,Hawaiian Airlines Inc.,4.904774194,11662
+Friday,American Eagle Airlines Inc.,7.937229746,43869
+Friday,Spirit Air Lines,14.76546591,16991
+Friday,Skywest Airlines Inc.,5.643318319,86611
+Friday,United Air Lines Inc.,4.810585176,77634
+Friday,US Airways Inc.,4.428037134,30246
+Friday,Virgin America,6.765781267,9380
+Friday,Southwest Airlines Co.,5.241040648,185731
+Saturday,American Airlines Inc.,1.929691127,92264
+Saturday,Alaska Airlines Inc.,-2.731807311,23574
+Saturday,JetBlue Airways,3.007505971,35631
+Saturday,Delta Air Lines Inc.,-2.462909062,99365
+Saturday,Atlantic Southeast Airlines,2.849675199,63484
+Saturday,Frontier Airlines Inc.,11.271113,11878
+Saturday,Hawaiian Airlines Inc.,1.852597588,10559
+Saturday,American Eagle Airlines Inc.,1.984390274,34246
+Saturday,Spirit Air Lines,13.16071213,16844
+Saturday,Skywest Airlines Inc.,3.173244308,71767
+Saturday,United Air Lines Inc.,2.045746023,57675
+Saturday,US Airways Inc.,1.36718815,24389
+Saturday,Virgin America,-1.653012048,7098
+Saturday,Southwest Airlines Co.,2.218540828,151771
+Sunday,American Airlines Inc.,3.38007567,103049
+Sunday,Alaska Airlines Inc.,-0.457694816,24693
+Sunday,JetBlue Airways,6.521257029,38742
+Sunday,Delta Air Lines Inc.,-1.538993258,124181
+Sunday,Atlantic Southeast Airlines,5.829891164,79547
+Sunday,Frontier Airlines Inc.,11.96359561,13058
+Sunday,Hawaiian Airlines Inc.,1.166743479,10867
+Sunday,American Eagle Airlines Inc.,6.830568086,41911
+Sunday,Spirit Air Lines,15.20540311,16844
+Sunday,Skywest Airlines Inc.,6.017411034,84324
+Sunday,United Air Lines Inc.,3.982733258,71076
+Sunday,US Airways Inc.,4.113999408,27724
+Sunday,Virgin America,9.506309885,8667
+Sunday,Southwest Airlines Co.,4.010832943,173081

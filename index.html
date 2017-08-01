@@ -8,7 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="topojson.v1.min.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/1.12.1/d3-annotation.min.js"></script>
 
 	<script src="myScript.js"></script>
 
@@ -49,20 +50,24 @@
 				This narrative visualization includes scenes, annotations, parameters and triggers.<br><br>
 				<b>Scenes</b>: There are five scenes in total. Each scene contains a graph. These scenes all follow a
 				a consistent visual structure so it will keep viewer oriented.<br>
-				<b>Annotations</b>: Annotations are added in each scene in the form of a dialoge box in the scene. There are 
-				pointers connect the annotation to the location of the chart if the annotation is aim for part of the chart. If 
+				<b>Annotations</b>: Annotations are added in each scene in the form of a dialoge box in the scene. There are
+				pointers connect the annotation to the location of the chart if the annotation is aim for part of the chart. If
 				the annotation is for the whole chart, there is not pointer. The annotations
 				follow a consistent templates. They get cleared when move to next scene.<br>
-				<b>Parameters</b>: the parameter in my visualization is the slide number on top of
+				<b>Parameters</b>: <br>
+				1. Slide number on top of
 				the screen.It controls how the data got grouped by and what content to show up. <br>
 				Scene number = 1: group the data by "Overview(the outcome of the flight)";<br>
 				Scene number = 2: group the data by "Month";<br>
 				Scene number = 3: group the data by "Day of week";<br>
 				Scene number = 4: group the data by "Airlines";<br>
 				Scene number = 5: group the data by "Airports";<br>
+				2. Airline parameter in "2.Month" and "3.Day of week" scenes. The airline parameter filter the data by the selected airline.<br>
 				<b>Triggers</b><br>1. Button of scene number: When the button got clicked,
 				all the content in current scene got cleared and content of the scene clicked will show.<br>
 				2. Tooltip: When mouse move to the element in the graph, a tooltip of the data details will show up.<br>
+				3. Airline selection bar: this trigger is implemented in the second and third scenes. Only the data of the
+				selected airline will be used in the bar chart.
 
 			</p>
 			<h3>User interface events</h3>
@@ -73,15 +78,18 @@
 
 			<h3>Content</h3>
 			<p><b>1. Overview</b><br>
-			This scene uses a pie chart to visualize the percentages of flights that are on time, delay and canceled.<br>
-			<b>2.Month</b><br>
-			This scene uses a bar chart to visualize the total number of flights and average arrival delay group by month.<br>
-			<b>3.Day of week</b><br>
-			This scene uses a bar chart to visualize the total number of flights and average arrival delay group by day of week.<br>
-			<b>4.Airlines</b><br>
-			This scene uses a bar chart to visualize the average arrival delay group by Airlines.<br>
-			<b>5.Airports</b><br>
-			This scene uses a map to visualize the total number of flights and average arrival delay group by airports.</p>
+				This scene uses a pie chart to visualize the percentages of flights that are on time, delay and canceled.<br>
+				<b>2.Month</b><br>
+				This scene uses a bar chart to visualize the total number of flights and average arrival delay group by month.
+				The selection bar is "airline" parameter. <br>
+				<b>3.Day of week</b><br>
+				This scene uses a bar chart to visualize the total number of flights and average arrival delay group by day of week.
+				The selection bar is implemented for the user to filter the airline data.<br>
+				<b>4.Airlines</b><br>
+				This scene uses a bar chart to visualize the average arrival delay group by Airlines.
+				The selection bar is implemented for the user to filter the airline data.<br>
+				<b>5.Airports</b><br>
+				This scene uses a map to visualize the total number of flights and average arrival delay group by airports.</p>
 		</div>
 		<div class="modal-footer">
 			<h3></h3>
@@ -91,15 +99,35 @@
 
 <div id='Time' class="tabcontent">
 	<h3>US Domestic Flight Arrival delay by Month</h3>
+	<div class="controls">
+		<label for="scale-select">Select Airline: </label>
+		<select class="scale-select">
+			<option value="All">All</option>
+			<option value="American Airlines Inc.">American Airlines Inc.</option>
+			<option value="Alaska Airlines Inc.">Alaska Airlines Inc.</option>
+			<option value="JetBlue Airways">JetBlue Airways</option>
+			<option value="Delta Air Lines Inc.">Delta Air Lines Inc.</option>
+			<option value="Atlantic Southeast Airlines">Atlantic Southeast Airlines</option>
+			<option value="Frontier Airlines Inc.">Frontier Airlines Inc.</option>
+			<option value="Hawaiian Airlines Inc.">Hawaiian Airlines Inc.</option>
+			<option value="American Eagle Airlines Inc.">American Eagle Airlines Inc.</option>
+			<option value="Spirit Air Lines">Spirit Air Lines</option>
+			<option value="Skywest Airlines Inc.">Skywest Airlines Inc.</option>
+			<option value="United Air Lines Inc.">United Air Lines Inc.</option>
+			<option value="US Airways Inc.">US Airways Inc.</option>
+			<option value="Virgin America">Virgin America</option>
+			<option value="Southwest Airlines Co.">Southwest Airlines Co.</option>
+		</select>
+	</div>
 	<div class="legendtitle">
 		<p>Number of flights</p>
 	</div>
-	<div id="month1" class="annotation" style="left:500px;top:250px;width:200px;">
-		<p>
-			June has the highest average arrival delay 9.6 minutes.
-			September and October have the lowest average arrival delay.
-		</p>
-	</div>
+	<!--<div id="month" class="annotation" style="left:500px;top:250px;width:200px;">-->
+		<!--<p>-->
+			<!--June has the highest average arrival delay 9.6 minutes.-->
+			<!--September and October have the lowest average arrival delay.-->
+		<!--</p>-->
+	<!--</div>-->
 	<!--<div id="month2" class="annotation" style="left:700px;top:650px">-->
 		<!--<p>September and October have the best performance.</p>-->
 	<!--</div>-->
@@ -107,14 +135,34 @@
 
 <div id='Day' class="tabcontent">
 	<h3>US Domestic Flight Arrival delay by Day of Week</h3>
+	<div class="controls">
+		<label for="scale-select">Select Airline: </label>
+		<select class="scale-select">
+			<option value="All">All</option>
+			<option value="American Airlines Inc.">American Airlines Inc.</option>
+			<option value="Alaska Airlines Inc.">Alaska Airlines Inc.</option>
+			<option value="JetBlue Airways">JetBlue Airways</option>
+			<option value="Delta Air Lines Inc.">Delta Air Lines Inc.</option>
+			<option value="Atlantic Southeast Airlines">Atlantic Southeast Airlines</option>
+			<option value="Frontier Airlines Inc.">Frontier Airlines Inc.</option>
+			<option value="Hawaiian Airlines Inc.">Hawaiian Airlines Inc.</option>
+			<option value="American Eagle Airlines Inc.">American Eagle Airlines Inc.</option>
+			<option value="Spirit Air Lines">Spirit Air Lines</option>
+			<option value="Skywest Airlines Inc.">Skywest Airlines Inc.</option>
+			<option value="United Air Lines Inc.">United Air Lines Inc.</option>
+			<option value="US Airways Inc.">US Airways Inc.</option>
+			<option value="Virgin America">Virgin America</option>
+			<option value="Southwest Airlines Co.">Southwest Airlines Co.</option>
+		</select>
+	</div>
 	<div class="legendtitle">
 		<p>Number of flights</p>
 	</div>
-	<div id="dayofweek" class="annotation">
-		<p>Monday, Thursday, Friday and Sunday have the highest average arrival delay.
-			Saturday has the best performance.
-		</p>
-	</div>
+	<!--<div id="dayofweek" class="annotation">-->
+		<!--<p>Monday, Thursday, Friday and Sunday have the highest average arrival delay.-->
+			<!--Saturday has the best performance.-->
+		<!--</p>-->
+	<!--</div>-->
 </div>
 
 <div id='Airlines' class="tabcontent">

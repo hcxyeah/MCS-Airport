@@ -42,10 +42,6 @@ div.tab button.tablinks.active {
 	fill: brown;
 }
 
-#Airlines .bar:hover {
-	fill: brown;
-}
-
 .axis-x path{
 	display: none;
 }
@@ -115,16 +111,16 @@ div.tab button.tablinks.active {
 	/*top: 200px;*/
 /*}*/
 
-#month2 .annotation {
+#Time .annotation {
 	width: 200px;
-	height: 100px;
-	left: 700px;
-	top: 200px;
+	height: 80px;
+	left: 500px;
+	top: 250px;
 }
 
 #Day .annotation {
 	width: 200px;
-	height: 100px;
+	height: 60px;
 	left: 700px;
 	top: 200px;
 }
@@ -254,7 +250,7 @@ div.tab button.tablinks.active {
 
 #myBtn:visited {
 	color: #FFFFFF;
-	background-color: ##8a89a6;
+	background-color: #8a89a6;
 }
 
 
