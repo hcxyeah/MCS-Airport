@@ -24,7 +24,7 @@ function openSection(evt, name) {
 
 
 
-d3.csv("Data/bymonth2.csv")
+d3.csv("bymonth2.csv")
   .row(function(d) { return {
   						month: d.MONTH,
   						arr_delay: +d.ARRIVAL_DELAY,
@@ -35,7 +35,7 @@ d3.csv("Data/bymonth2.csv")
 		byMonth(data);
 });
 
-d3.csv("Data/byDayOfWeek.csv")
+d3.csv("byDayOfWeek.csv")
   .row(function(d) { return {
   						dayOfWeek: d.DAY_OF_WEEK,
 	  					airline: d.AIRLINE,
@@ -46,7 +46,7 @@ d3.csv("Data/byDayOfWeek.csv")
   		byDayOfWeek(data);
   });
 
-d3.csv("Data/byAirline.csv")
+d3.csv("byAirline.csv")
   .row(function(d) { return {
   						airline: d.AIRLINE,
   						arr_delay: +d.ARRIVAL_DELAY,
@@ -56,7 +56,7 @@ d3.csv("Data/byAirline.csv")
   		byAirline(data)
   });
 
-d3.csv("Data/reason.csv")
+d3.csv("reason.csv")
   .row(function(d) { return {
   						reason: d.reason,
   						percentage: +d.percentage
@@ -66,8 +66,8 @@ d3.csv("Data/reason.csv")
   });
 
 d3.queue()
-	.defer(d3.json, "Data/us.json")
-	.defer(d3.csv, "Data/byAirports.csv")
+	.defer(d3.json, "us.json")
+	.defer(d3.csv, "byAirports.csv")
 
 	.await(function(error, geo_data, data) {
 		byAirport(geo_data, data)
